@@ -2,10 +2,11 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-**STILL IN DEVELOPMENT**
 
-I'm really bad at naming so we probably will change it.
-I don't have much time to code so progress will slowdown.
+## New Home
+
+**This repo will not be maintained.**
+Please use [SymSan](https://github.com/R-Fuzz/symsan) instead.
 
 ## Building
 
