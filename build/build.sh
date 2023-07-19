@@ -9,7 +9,7 @@ git submodule update
 
 sudo apt-get update
 sudo apt-get install -y libc6 libstdc++6 linux-libc-dev gcc-multilib \
-    cmake clang llvm-dev g++ g++-multilib python python-pip zlib1g-dev \
+    cmake clang llvm-dev g++ g++-multilib python3 python-pip zlib1g-dev \
     libc++-dev libc++abi-dev
 
 PREFIX=${PREFIX:-${ROOT_DIR}/bin/}
@@ -17,7 +17,7 @@ PREFIX=${PREFIX:-${ROOT_DIR}/bin/}
 # install Z3
 pushd z3
 rm -rf build
-python scripts/mk_make.py
+python3 scripts/mk_make.py
 pushd build
 make -j$(nproc)
 sudo make install
