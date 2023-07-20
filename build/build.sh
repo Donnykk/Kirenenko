@@ -33,7 +33,7 @@ pushd llvm_mode
 rm -rf build
 mkdir -p build
 pushd build
-CC=clang CXX=clang++ cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} -DCMAKE_BUILD_TYPE=Release ..
+CC=clang CXX=clang++ cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release ..
 make -j$(nproc)
 sudo make install
 popd

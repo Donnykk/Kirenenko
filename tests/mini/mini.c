@@ -8,8 +8,8 @@
 #include "stdlib.h"
 #include "string.h"
 
-int main(int argc, char **argv) {
-
+int main(int argc, char **argv)
+{
   if (argc < 2)
     return 0;
 
@@ -19,7 +19,8 @@ int main(int argc, char **argv) {
 
   fp = fopen(argv[1], "rb");
 
-  if (!fp) {
+  if (!fp)
+  {
     printf("st err\n");
     return 0;
   }
@@ -27,7 +28,8 @@ int main(int argc, char **argv) {
   int len = 20;
   ret = fread(buf, sizeof *buf, len, fp);
   fclose(fp);
-  if (ret < len) {
+  if (ret < len)
+  {
     printf("input fail \n");
     return 0;
   }
@@ -41,8 +43,10 @@ int main(int argc, char **argv) {
   memcpy(&y, buf + 4, 4);  // y 4 - 7
   memcpy(&z, buf + 10, 4); // 10 - 13
   memcpy(&a, buf + 14, 4); // 14 - 17
+  printf("%d \n%d \n%d \n%d \n", x, y, z, a);
   if (x > 12300 && x < 12350 && z < -100000000 && z > -100000005 &&
-      z != -100000003 && y >= 987654321 && y <= 987654325 && a == 123456789) {
+      z != -100000003 && y >= 987654321 && y <= 987654325 && a == 123456789)
+  {
 
     printf("hey, you hit it \n");
     abort();
